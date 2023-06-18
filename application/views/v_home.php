@@ -150,8 +150,8 @@
                 }
             },
             onEachFeature: function(feature, layer){
-              var kode = feature.properties.kode;
-              var detail = feature.properties.detail;
+                  var kode = feature.properties.kode;
+                  var detail = feature.properties.detail;
               $.getJSON(base_url+"home/foto/"+kode, function(result){
               var info_bidang = "<h4 style='text-align:center'>Info Bidang</h4>";
                   info_bidang += "<a href='<?= base_url()?>home/detilbidang/"+kode+"'><img src='<?= base_url() ?>assets/images/"+result+"' width=100%></a>";
@@ -166,8 +166,11 @@
                   layer.openPopup();
                 });
               });
+                
+              
             }
           }).addTo(map);
+          
         });
           </script>
 

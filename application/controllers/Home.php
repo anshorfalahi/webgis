@@ -13,7 +13,12 @@ class Home extends CI_Controller {
 	{
 		$data =$this->hm->get_faskes();
 		echo json_encode($data);
+	}
 
+	public function bidang()
+	{
+		$data =$this->hm->get_bidang();
+		echo json_encode($data);
 	}
 
 	public function index()
